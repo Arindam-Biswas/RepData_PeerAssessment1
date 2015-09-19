@@ -20,7 +20,7 @@ This report when writing code chunks, always use `echo = TRUE` so that the repor
 echo is set to `TRUE` and results is set to `'hold'` as global options.  
 ```{r set_options}
 library(knitr)
-opts_chunk$set(echo = TRUE, results = 'hold')
+opts_chunk$set(echo = TRUE, results = 'hold', fig.path='figure/')
 ```
 ###Step 2. Load the required libraries
 ```{r, results='hide', warning=FALSE, message=FALSE}

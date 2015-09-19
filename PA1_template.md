@@ -16,7 +16,7 @@ echo is set to `TRUE` and results is set to `'hold'` as global options.
 
 ```r
 library(knitr)
-opts_chunk$set(echo = TRUE, results = 'hold')
+opts_chunk$set(echo = TRUE, results = 'hold', fig.path='figure/')
 ```
 ###Step 2. Load the required libraries
 
@@ -102,7 +102,7 @@ ggplot(steps_per_day, aes(x = steps)) +
              x = "Number of Steps per Day", y = "Frequency (Count of days)")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png) 
+![](figure/unnamed-chunk-7-1.png) 
 
 ###Step 3. Calculate the Mean
 Now we calculate the ***mean*** and ***median*** of the number of steps taken per day.
@@ -143,7 +143,7 @@ ggplot(steps_per_interval, aes(x=interval, y=steps)) +
         labs(title="Time Series of Average Number of Steps Taken", x="Interval", y="Average Number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-11-1.png) 
+![](figure/unnamed-chunk-11-1.png) 
 
 ###Step 2. Find Interval with Maximum Numbers of steps
 Now, we find the 5-minute interval with the containing the maximum number of steps:
@@ -228,7 +228,7 @@ ggplot(new_steps_per_day, aes(x = steps)) +
              x = "Number of Steps per Day", y = "Frequency (Count of days)") 
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-21-1.png) 
+![](figure/unnamed-chunk-21-1.png) 
 
 ### Step 4b. Calculate the New Mean and Median
 Then we calculate the new mean and median of the total number of steps taken per day
@@ -292,7 +292,7 @@ ggplot(new_steps_per_interval, aes(x=interval, y=steps)) +
         labs(title="Panel plot of Average Number of Steps in Weekday vs. Weekend", x="Interval", y="Average Number of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-26-1.png) 
+![](figure/unnamed-chunk-26-1.png) 
 
 We observe from the above panel plot for weekday vs. weekend days that average number of steps taken on the weekday has a highest peak value between the `750` and `1000` five minute time intervals (**Early Morning**) . This is significantly higher than the  peak in the number of steps taken on weekdays (*which also occurs between the `750` and `1000` five minute time intervals  i.e., early morning*)
 
